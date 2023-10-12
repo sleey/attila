@@ -9,15 +9,9 @@
 
 <header class="post-header {{#if feature_image}} has-cover {{/if}}">
 	<div class="inner">
-		<span class="post-info">
-			<span class="post-type">{{t "Article"}}</span>
-			{{#if tags}}
-			<span class="post-count">{{primary_tag.name}}</span>
-			{{/if}}
-		</span>
-		<h1 class="post-title">{{{title}}}</h1>
+		<h1 class="post-title" style="padding-top: 3rem;">{{{title}}}</h1>
 		<div class="post-meta">
-			<div class="post-meta-avatars">
+			{{!-- <div class="post-meta-avatars">
 				{{#foreach authors}}
 					<figure class="post-meta-avatar avatar">
 						{{#if profile_image}}
@@ -27,8 +21,8 @@
 						{{/if}}
 					</figure>
 				{{/foreach}}
-			</div>
-			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
+			</div> --}}
+			{{!-- <h4 class="post-meta-author">{{authors separator=", "}}</h4> --}}
 			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 		</div>
 		{{#if feature_image}}
@@ -55,7 +49,7 @@
 
 			<section class="post-footer">
 
-				<div class="post-share">
+				{{!-- <div class="post-share">
 					<span class="post-info-label">{{t "Share"}}</span>
 					<a title="Twitter" aria-label="Twitter" class="twitter" href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 						<i class="icon icon-twitter" aria-hidden="true"></i>
@@ -69,7 +63,7 @@
 					<a title="Email" aria-label="Email" class="email" href="mailto:?subject={{title}}&amp;body={{url absolute="true"}}">
 						<i class="icon icon-mail" aria-hidden="true"></i>
 					</a>
-				</div>
+				</div> --}}
 
 				{{#if tags}}
 				<aside class="post-tags">
@@ -108,7 +102,7 @@
 						<section class="post-nav-teaser">
 							<i class="icon icon-arrow-left" aria-label="{{t "Next post"}}"></i>
 							<h2 class="post-nav-title">{{title}}</h2>
-							<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
+							{{!-- <p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p> --}}
 							<p class="post-nav-meta"><time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>
 						</section>
 					</a>
@@ -120,8 +114,8 @@
 						<section class="post-nav-teaser">
 							<i class="icon icon-arrow-right" aria-label="{{t "Previous post"}}"></i>
 							<h2 class="post-nav-title">{{title}}</h2>
-							<p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p>
-							<p class="post-nav-meta"><time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p>
+							{{!-- <p class="post-nav-excerpt">{{excerpt words="12"}}&hellip;</p> --}}
+							<p class="post-nav-meta"><time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></p> 
 						</section>
 					</a>
 				{{/prev_post}}
